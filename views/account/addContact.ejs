@@ -1,0 +1,43 @@
+<!-- I am in here for the details page -->
+
+<% if (title) { %>
+    <h1><%- title %></h1>
+
+    <form action="/account/update-account/<%- account_id%>" method="post" class="update-account">
+        <div>
+        <label for="account_firstname">* Contact first name: <input name="account_firstname" type="text" require></label>
+        </div>
+        <br>
+        <div>
+            <label for="account_lastname">* Contact Last name: <input name="account_lastname" type="text" require></label>
+        </div>
+        <br>
+        <div>
+            <label for="account_email">* Contact email: <input name="account_email" type="text" require></label>
+        </div>
+        <br>
+        <div>
+            <label for="account_phone">* Contact phone: <input name="account_phone" type="text" require></label>
+        </div>
+        <br>
+        <div>
+            <label for="account_relationship">Contact relationship: <input name="account_relationship" type="text" ></label>
+        </div>
+        <br>
+        <div>
+            <label for="account_info">Contact info: <input name="account_info" type="text" ></label>
+            <p>Any extra information that would help.</p>
+        </div>
+        <br>
+
+        <input type="hidden" name="account_id" value=<%- account_id %>>
+
+        <button type="submit">Update Account</button>
+
+      </form>
+
+    <% } else {
+      res.redirect('/')
+    } %>
+
+    <% messages() %>

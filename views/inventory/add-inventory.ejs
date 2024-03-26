@@ -1,0 +1,57 @@
+<!-- I am in here for the details page -->
+
+<% if (title) { %>
+    <h1><%= title %></h1>
+
+
+        <form action="" method="post" id="dynamicForm">
+            <div>
+                <%- classificationSelect %>
+            </div>
+            <br>
+            <div>
+            <label for="inv_make">Make: <input type="text" id="inv_make" name="inv_make" required></label>
+            </div>
+            <br>
+            <div>
+            <label for="inv_model">Model: <input type="text" id="inv_model" name="inv_model" required></label>
+            </div>
+            <br>
+            <div>
+            <label for="inv_year">Year:
+            <input type="number" id="inv_year" name="inv_year" required></label>
+            </div><br>
+            <div>
+            <label for="inv_description">Description:
+            <textarea id="inv_description" name="inv_description" required></textarea></label>
+            </div><br>
+            <div>
+            <label for="inv_image">Image URL:
+            <input type="text" id="inv_image" name="inv_image" required></label>
+            </div><br>
+            <div>
+            <label for="inv_thumbnail">Thumbnail URL:
+            <input type="text" id="inv_thumbnail" name="inv_thumbnail" required></label>
+            </div><br>
+            <div>
+            <label for="inv_price">Price:
+            <input type="number" id="inv_price" name="inv_price" required></label>
+            </div><br>
+            <div>
+                <label for="inv_miles">Miles:
+                <input type="number" id="inv_miles" name="inv_miles" required></label>
+            </div>
+            <br>
+            <div>
+            <label for="inv_color">Color:
+            <input type="text" id="inv_color" name="inv_color" required></label>
+            </div><br>
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- <script src="/public/new_inv_form_inputs.js"></script> -->
+    <% } else {
+      res.redirect('/')
+    } %>
+
+    <% messages() %>

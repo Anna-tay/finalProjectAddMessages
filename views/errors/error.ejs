@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+
+<body>
+<img src="images/site/small_check.jpg" alt="background image" loading="lazy" class="body-img">
+    <div class="all-content">
+        <div id="box-blue">
+            <div id="wrapper">
+                <%- include('../partials/header') %>
+                <%- include('../partials/navigation') %>
+            </div>
+            <main>
+                <%- message || 'There is an error' %>
+            </main>
+            <%- include('../partials/footer') %>
+        </div>
+    </div>
+</body>
+</html>

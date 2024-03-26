@@ -1,0 +1,21 @@
+<!-- I am in here for the details page -->
+
+<% if (title) { %>
+    <h1><%= title %></h1>
+
+    <form id="add-classification" action="" method="post">
+
+        <label for="classification-name">Classification Name:</label>
+        <input type="class" name="classification_name" id="classification-name" required pattern="^[a-zA-Z0-9]+$">
+        <br>
+        <p><span class="password_instructions">* The new classification name cannot contain a space or special character of any kind</span>
+        </p>
+          <br>
+        <button type="submit">Submit New classification</button>
+
+    </form>
+    <% } else {
+      res.redirect('/')
+    } %>
+
+    <% messages() %>

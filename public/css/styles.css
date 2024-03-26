@@ -1,0 +1,428 @@
+/******* Change Box Model ***************/
+/* my small looking display */
+:root {
+  --blueP : rgb(204, 204, 233);
+  --purpleP: rgb(59, 40, 32);
+}
+
+.body-img {
+  display:none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+/* header */
+#top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.siteName {
+  font-size: 44px; /* Adjust the font size to make the logo bigger */
+}
+
+.siteName a {
+  text-decoration: none;
+  color: var(--purpleP);
+}
+
+#tools a {
+  text-decoration: none;
+  color: black;
+}
+
+/* nav */
+nav {
+  margin-top: 1rem;
+  display: flex;
+  background-color: var(--purpleP);
+  justify-content: center; /* Center the nav horizontally */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: auto;
+  text-decoration: none;
+  padding: 0.3rem;
+  color: var(--blueP);
+  font-size: 24px;
+}
+
+nav li:hover {
+  border: 1px solid var(--blueP);
+  border-radius: 5px;
+  color: white;
+}
+
+/* body */
+body {
+  background-color: rgb(231, 229, 229);
+}
+
+.img-containor {
+  position: relative;
+}
+.left-section{
+  flex: 0;
+}
+
+.right-section{
+  flex: 0;
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--blueP);
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.637);
+}
+.card h3{
+  padding: 0px;
+  margin: 0px;
+}
+.card h4{
+  padding: 0px;
+  margin: 0px;
+}
+.card img {
+  width: 90px;
+}
+
+.del-img {
+  display: block;
+  margin-left: 3rem;
+}
+
+#large {
+  display: none;
+  width:auto;
+}
+
+/* upgrade section */
+.upgrade_section{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  row-gap: 60px;
+  column-gap: 10px;
+}
+
+.up-card{
+  background-color: var(--blueP);
+  width: 120px;
+  height: 100px;
+  padding: 1.3rem;
+  margin: .3rem;
+  border: 1px solid #000;
+}
+.card-img{
+  width: auto;
+  justify-content: center;
+}
+
+.upgrade_section p{
+  text-decoration: underline;
+  display: center;
+  color: blue;
+  padding-bottom: 290px;
+}
+
+.nav-section-color li a{
+  text-decoration: none;
+  color: var(--blueP);
+}
+
+footer{
+  margin-top: 80px;
+}
+
+/* details page */
+
+.car-section{
+  /* this is the car left section */
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+#big-car{
+  /* bigimage of car */
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: green;
+  width: 100%;
+  height: auto;
+}
+#small-car{
+  /* small car */
+  padding: .5rem;
+  padding-bottom: 0;
+}
+#passed_inpec {
+  flex: 1;
+  padding: 20px; /* Adjust the padding as needed */
+}
+#enter-prise {
+  padding: 20px; /* Adjust the padding as needed */
+}
+
+.info-section{
+  /* the information section */
+  color:black;
+  display: flex;
+  flex-direction: column;
+}
+.no-hagging{
+  flex: 2;
+  /* no hagging thing */
+  background-color: lightblue;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+
+}
+.info-section h1 {
+  width: 100%;
+  flex: 1;
+  text-align: center; /* Optional: Align text at the center */
+  margin-top: 20px; /* Adjust margin as needed */
+}
+.no-hagging h3{
+  /* no hagging thing */
+  color:green;
+
+}
+.no-hagging h4{
+  /* no hagging thing */
+  padding-left: 1rem;
+
+}
+.info-haggle{
+  padding: .5rem;
+  flex: 4;
+}
+.info-haggle p{
+  float: right;
+}
+.info-haggle h3{
+  float: right;
+}
+.detail-section{
+  background-color: white;
+  color:black;
+}
+.detail-section-info{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.miles{
+  margin-left: .5rem;
+  background-color: rgba(61, 173, 243, 0.425);
+  flex: 1;
+  padding:.3rem;
+  text-align: center;
+  height: 105px;
+
+}
+.miles h3{
+  background-color: white;
+}
+
+#mpg{
+  color:green;
+
+}
+.start-my-purchase{
+  padding: 10px 20px;
+    background-color: green;
+    color: #ffffff;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.other-buttons{
+  padding: 10px 20px;
+  background-color: rgba(34, 95, 133, 0.63);
+  color: #ffffff;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.number{
+  color:green;
+}
+
+/* login  */
+#loginForm{
+  border: 2px gray;
+  background-color: rgb(46, 46, 75);
+  padding: .5rem;
+  margin: 1rem;
+}
+#loginForm label{
+  color: white;
+  padding: 1rem;
+}
+#loginForm input{
+  margin-bottom: .3rem;
+}
+#loginForm p{
+  color: white;
+}
+#loginForm p a{
+  color: rgb(133, 231, 255);
+}
+.password_instructions{
+  font-size: small;
+  color:white;
+}
+
+.registrationForm{
+  border: 2px gray;
+  background-color: rgb(46, 46, 75);
+  padding: .5rem;
+  margin: 1rem;
+}
+.registrationForm label{
+  color: white;
+  padding: 1rem;
+}
+.registrationForm input{
+  margin-bottom: .3rem;
+}
+.registrationForm p{
+  color: white;
+}
+.registrationForm p a{
+  color: rgb(133, 231, 255);
+}
+
+/* mamager views */
+#add-classification{
+  background-color: rgb(46, 46, 75);
+  padding: 1rem;
+  margin: 1rem;
+}
+
+#add-classification label{
+  color: white;
+}
+
+#dynamicForm{
+  background-color: rgb(46, 46, 75);
+
+}
+
+#dynamicForm label{
+  color: white;
+
+}
+
+#dynamicForm div{
+  margin: .5rem;
+
+}
+#dynamicForm input{
+  width: 70%;
+
+}
+#dynamicForm textarea{
+  width: 70%;
+
+}
+#dynamicForm select{
+  width: 50%;
+
+}
+
+#classificationList{
+  width: 255px;
+  background-color: #e7e7e7;
+   color: black;
+   font-size: 18px;
+}
+
+#box-loginout {
+  position: fixed;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+}
+
+
+.links a{
+  padding: .3rem;
+  margin:.3rem;
+  border: 1px solid rgb(46, 46, 75);
+  text-decoration: none;
+}
+
+.links a:hover{
+  background-color: rgba(194, 191, 191, 0.267);
+}
+
+.update-account, .update-password {
+  border: 2px gray;
+  background-color: rgb(46, 46, 75);
+  padding: 1rem;
+  margin: .5rem;
+}
+
+.update-account label, .update-password label{
+  color: white;
+}
+
+.update-account button, .update-password button{
+  padding: .3rem;
+  margin:.3rem;
+  border: 1px solid rgb(46, 46, 75);
+  background-color: white;
+  text-decoration: none;
+}
+
+.update-account button:hover, .update-password button:hover{
+  background-color: rgba(240, 239, 239, 0.884);
+}
+
+/* showlogin view  */
+.contactTable {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.contactTable table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.contactTable th, .contactTable td {
+  text-align: left;
+  padding: 8px;
+}
+
+.contactTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

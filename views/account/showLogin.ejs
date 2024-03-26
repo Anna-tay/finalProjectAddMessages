@@ -1,0 +1,23 @@
+<!-- I am in here for the details page -->
+
+<% if (title) { %>
+    <h1><%= title %></h1>
+    <div class="links">
+    <% if (accountType == 'client') { %>
+      <h2> Welcome <%- account_name %></h2>
+      <a  href=<%- updateAccountLink %>>Update account information</a>
+
+  
+
+    <% } else if(accountType == 'Employee' || accountType == 'admin')  { %>
+      <h2> Welcome <%- account_name %></h2>
+      <p><a href=<%- updateAccountLink %>>Update Account</a></p>
+      <p> <a href="/inv/" >Management Inventory</a></p>
+      <%- contactTable %>
+    <% } %>
+    </div>
+    <% } else {
+      res.redirect('/')
+    } %>
+
+    <% messages() %>

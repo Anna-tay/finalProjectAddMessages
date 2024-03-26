@@ -1,0 +1,20 @@
+
+<header id="top-header">
+    <span class="siteName">
+      <a href="/" title="Return to home page">Awesome Motors</a>
+    </span>
+    <div id="tools">
+      <% if (loginLogout == "loggedOut"){ %>
+        <!-- <p>Welcome basic</p> -->
+        <a href="/account/login">Login</a>
+      <% }else if (loginLogout == "loggedIn") {%>
+        <a href="/account/logout">Logout</a>
+      <% }else{ %>
+        <p><%- loginLogout%> </p>
+      <% } %>
+    </div>
+    <!-- <div>
+      <a href="/account/logout">Logout</a>
+    </div> -->
+
+</header>

@@ -9,6 +9,7 @@ const bodyParser = require("body-parser")
 const session = require("express-session")
 const pool = require('./database/')
 const accountRoute = require('./routes/accountRoutes')
+const messageRoute = require('./routes/messageRoutes')
 const express = require("express")
 const expressLayouts = require("express-ejs-layouts")
 const env = require("dotenv").config()
@@ -58,6 +59,7 @@ app.set("layout", "./layouts/layout"); // not at views root
 app.use(static);
 // Inventory routes
 app.use("/inv", inventoryRoute)
+app.use("/message", messageRoute)
 // account routes
 app.use("/account", accountRoute)
 // for management routes

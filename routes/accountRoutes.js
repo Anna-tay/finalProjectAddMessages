@@ -50,13 +50,5 @@ router.post(
   utilities.handleErrors(accountController.accountLogin)
 )
 
-//  final project add on
-// adding a reference/contact
-// router.get("/addContact/:account_id", utilities.checkLoginned, utilities.handleErrors(accountController.buildUpdateAccount))
-
-// router.post("/addContact/:account_id",
-// utilities.checkLoginned,
-//  utilities.handleErrors(accountController.buildAddContact))
-
 
 module.exports = router;

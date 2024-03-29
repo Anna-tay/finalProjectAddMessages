@@ -1,6 +1,5 @@
 const invModel = require("../models/inventory-model")
 const utilities = require("../utilities/")
-const contactModel = require("../models/contact-mondel")
 const jwt = require("jsonwebtoken")
 require("dotenv").config()
 
@@ -142,45 +141,6 @@ Util.buildClassificationList = async function() {
       grid += '<p class="notice">Sorry, no vehicle could be found.</p>';
   }
   return grid;
-};
-
-// buildContactTable
-Util.buildContactTable = async function() {
-    let data = await contactModel.getAllContacts()
-    let grid = '<h3>Referrals</h3> <div class="contactTable">'
-    if (data.rows){
-      grid += `<table id="contactsTable">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Phone</th>
-          <th>Relationship</th>
-          <th>Info</th>
-          <th>Referred By</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>`
-      data.rows.forEach(row => {
-        if (row.contacted == 1){
-          grid += `<tr><td> ${row.contact_firstname} ${row.contact_lastname} </td>
-          <td> ${row.contact_email}</td>
-          <td> ${row.contact_phone}</td>
-          <td> ${row.contact_relationship}</td>
-          <td> ${row.contact_info}</td>
-          <td> ${row.account_firstname} ${row.account_lastname}</td>
-          <td><button onClick='markContacted()'>Contacted</button></td></tr>`
-        }else{
-          pass
-        }
-
-      });
-      grid += `</tbody> </table> </div>`
-    } else {
-      grid += '<p class="notice">No one to contact yet. Please look again later!</p>';
-    }
-    return grid;
 };
 
 

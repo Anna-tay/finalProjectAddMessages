@@ -145,8 +145,6 @@ async function buildShowLogin(req, res, next) {
   let accountType = account_info.account_type
   let account_name = account_info.account_firstname + ' ' + account_info.account_lastname
   let account_id = account_info.account_id;
-  let contactTable = await utilities.buildContactTable()
-  // let addContact = "/account/addContact/"+ account_id
   let updateAccountLink = "/account/update-info/" + account_id
   res.render("account/showLogin", {
     title: "Congrats you are logged in",
@@ -156,7 +154,6 @@ async function buildShowLogin(req, res, next) {
     accountType,
     account_name,
     account_id,
-    contactTable,
     updateAccountLink
   })
 }
@@ -319,37 +316,5 @@ async function buildAddContact(req, res, next) {
   })
 }
 
-// async function addContact(req, res, next) {
-//   let nav = await utilities.getNav()
-//   let loginLogout = await utilities.getLoginLogout();
-//   const { account_firstname, account_lastname, account_email, account_phone, account_relationship, account_info, account_id } = req.body;
-
-//   // Call registerAccount with the hashed password
-//   const regResult = await accountModel.addContactSQL(
-//     account_firstname, account_lastname, account_email, account_phone, account_relationship, account_info, account_id
-//   );
-
-//   if (regResult) {
-//     const account_id = req.params.account_id
-//     let nav = await utilities.getNav()
-//     res.render("account/addContact", {
-//       title: "A contact was created! Want to add another?",
-//       nav,
-//       loginLogout,
-//       errors: null,
-//       account_id,
-//     })
-//   } else {
-//     const account_id = req.params.account_id
-//     let nav = await utilities.getNav()
-//     res.render("account/addContact", {
-//       title: "Sorry something went wrong please try again later.",
-//       nav,
-//       loginLogout,
-//       errors: null,
-//       account_id,
-//     })
-//   }
-// }
 
 module.exports = { updatePassword, buildAddContact, updateAccount, buildUpdateAccount, buildLogin, buildRegister, registerAccount, accountLogin, buildShowLogin, buildShowSorry }
